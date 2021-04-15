@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr repeat(4, 1fr);
     align-items: center;
+    transition: all 0.1s;
 }
 .file:hover {
     transform: scale(1.02);
@@ -14,8 +15,33 @@
 .file__date {
     grid-column-start: 5;
     justify-self: center;
+    transition: all 0.1s;
 }
 .file__size {
     grid-column-start: 6;
     justify-self: center;
+    transition: all 0.1s;
+}
+.file__btn {
+    display: none;
+    transition: all 0.3s;
+}
+.file:hover .file__date {
+    grid-column-start: 3;
+}
+.file:hover .file__size {
+    grid-column-start: 4;
+}
+.file__download, .file__delete{
+    transition: all 0.3s;
+}
+.file:hover .file__download {
+    cursor: pointer;
+    grid-column-start: 5;
+    display: block;
+}
+.file:hover .file__delete {
+    cursor: pointer;
+    grid-column-start: 6;
+    display: block;
 }
