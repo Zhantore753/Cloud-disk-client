@@ -4,8 +4,6 @@ import {useSelector} from "react-redux";
 import File from "./file/File";
 
 const FileList = () => {
-    const cfiles = useSelector(state => state.files.files);
-    console.log(cfiles);
     const files = useSelector(state => state.files.files).map(file => <File key={file._id} file={file}/>);
 
     return (
