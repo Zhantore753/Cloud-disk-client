@@ -25,6 +25,11 @@
     margin-left: auto;
 }
 
+.navbar__search {
+    width: 200px;
+    margin-left: 30px;
+}
+
 .navbar__logout:hover{
     text-decoration: none;
 }

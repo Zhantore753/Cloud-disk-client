@@ -12,6 +12,9 @@
 .file__img {
     justify-self: center;
 }
+.file__name{
+    cursor: default;
+}
 .file__date {
     grid-column-start: 5;
     justify-self: center;
