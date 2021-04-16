@@ -34,6 +34,7 @@
     background-color: #E9E6E6;
     width: 58px;
     margin: 0px auto;
+    outline: none;
 }
 .file__btn:hover{
     background-color: #fff;
@@ -63,4 +64,22 @@
     cursor: pointer;
     grid-column-start: 6;
     display: block;
+}
+.file-plate {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.file-plate__img {
+    height: 100px;
+    width: 100px;
+}
+.file-plate__btns {
+    display: none;
+}
+.file-plate:hover .file-plate__btns {
+    display: flex;
 }
