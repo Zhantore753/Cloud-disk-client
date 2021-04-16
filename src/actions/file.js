@@ -1,7 +1,7 @@
 import axios from 'axios';
-import {addFile, deleteFileAction, setFiles} from "../reducers/fileReducer";
+import {addFile, deleteFileAction, setFiles, setCurrentDirName} from "../reducers/fileReducer";
 import {addUploadFile, changeUploadFile, showUploader} from "../reducers/uploadReducer";
-import {hideLoader, showLoader} from "../reducers/appReducer";
+import {hideLoader} from "../reducers/appReducer";
 
 export function getFiles(dirId, sort) {
     return async dispatch => {
@@ -19,7 +19,8 @@ export function getFiles(dirId, sort) {
             const response = await axios.get(url, {
                 headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}
             });
-            dispatch(setFiles(response.data));
+            dispatch(setCurrentDirName(response.data.parent));
+            dispatch(setFiles(response.data.files));
         } catch (e) {
             alert(e.response.data.message);
         } finally {

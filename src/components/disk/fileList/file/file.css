@@ -28,6 +28,22 @@
 .file__btn {
     display: none;
     transition: all 0.3s;
+    border: 1px solid #566885;
+    box-sizing: border-box;
+    border-radius: 37px;
+    background-color: #E9E6E6;
+    width: 58px;
+    margin: 0px auto;
+}
+.file__btn:hover{
+    background-color: #fff;
+    border-color: rgba(86, 104, 133, 0.5);
+}
+.file__download{
+    padding: 4px 15px 2px;
+}
+.file__delete{
+    padding: 8px 15px;
 }
 .file:hover .file__date {
     grid-column-start: 3;

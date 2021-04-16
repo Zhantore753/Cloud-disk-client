@@ -1,23 +1,76 @@
 .disk {
     margin-top: 20px;
 }
+.disk__current-dir{
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+.disk__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
 .disk__btns {
+    display: flex;
+    flex-direction: column;
+}
+.disk__back{
+    max-width: 60px;
+    cursor: pointer;
+    padding: 11px 16px 10px 16px;
+    border: 1px solid #566885;
+    box-sizing: border-box;
+    border-radius: 37px;
+    background-color: #E9E6E6;
+    transition: all 0.3s;
+    outline: none;
+    margin-bottom: 18px;
+}
+.disk__back:hover{
+    background-color: #fff;
+    border-color: rgba(86, 104, 133, 0.5);
+}
+.disk__header-actions{
     display: flex;
 }
 .disk__create {
-    margin-left: 10px;
+    cursor: pointer;
+    padding: 9px 8px;
+    border: 1px solid #566885;
+    box-sizing: border-box;
+    border-radius: 14px;
+    background-color: #E9E6E6;
+    transition: all 0.3s;
+    font-size: 14px;
+    line-height: 16px;
+    outline: none;
+}
+.disk__create:hover{
+    background-color: #fff;
+    border-color: rgba(86, 104, 133, 0.5);
 }
 .disk__upload-input {
     display: none;
 }
 .disk__upload-label {
+    display: flex;
     border: 2px dashed #566885;
     padding: 5px 10px;
     cursor: pointer;
     margin-left: 10px;
 }
 .disk__select {
+    cursor: pointer;
     margin-left: auto;
+    background-color: #E9E6E6;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: 20px;
+    color: #566885;
 }
 .drop-area {
     width: 100%;

@@ -17,14 +17,14 @@ const Navbar = () => {
 
     function searchChangeHandler(e) {
         setSearchName(e.target.value);
-        if (searchTimeout != false) {
+        if (searchTimeout !== false) {
             clearTimeout(searchTimeout);
         }
         dispatch(showLoader())
-        if(e.target.value != '') {
+        if(e.target.value !== '') {
             setSearchTimeout(setTimeout((value) => {
                 dispatch(searchFiles(value));
-            }, 500, e.target.value));
+            }, 1000, e.target.value));
         } else {
             dispatch(getFiles(currentDir));
         }
@@ -40,7 +40,7 @@ const Navbar = () => {
                     onChange={e => searchChangeHandler(e)}
                     className='navbar__search'
                     type="text"
-                    placeholder="Название файла..."/>}
+                    placeholder="Поиск..."/>}
                 {!isAuth && <div className="navbar__login"><NavLink to="/login">Войти</NavLink></div>}
                 {!isAuth && <div className="navbar__registration"><NavLink to="/registration">Регистрация</NavLink></div>}
                 {isAuth && <div className="navbar__logout" onClick={()=>dispatch(logout())}>Выход</div>}
