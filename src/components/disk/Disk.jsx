@@ -17,6 +17,8 @@ const Disk = () => {
     const[dragEnter, setDragEnter] = useState(false);
     const [sort, setSort] = useState('type');
 
+    console.log(currentDirName);
+
     useEffect(()=>{
         dispatch(getFiles(currentDir, sort));
     }, [currentDir, sort]);
@@ -65,7 +67,7 @@ const Disk = () => {
 
     return ( !dragEnter ?
         <div className="disk" onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
-            <h2 className='disk__current-dir'>{currentDirName[0] ? currentDirName[0].name : 'Корневая папка'}</h2>
+            <h2 className='disk__current-dir'>{currentDirName[0] ? currentDirName[0].path : 'Корневая папка'}</h2>
             <div className="disk__header">
                 <div className="disk__btns">
                     <button className="disk__back" onClick={() => backClickHandler()}>

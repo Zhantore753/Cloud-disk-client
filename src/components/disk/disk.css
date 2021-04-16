@@ -1,5 +1,6 @@
 .disk {
     margin-top: 20px;
+    height: 100%;
 }
 .disk__current-dir{
     text-align: center;
